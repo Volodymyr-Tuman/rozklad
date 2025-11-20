@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Володя - розклад уроків</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Володя - розклад уроків</h1>
+      <div class="controls">
+        <button id="prevDay" class="secondary">◀</button>
+        <div class="day-label" id="currentDayLabel">Loading...</div>
+        <button id="nextDay" class="secondary">▶</button>
+        <button id="todayBtn">Сьогодні</button>
+      </div>
+    </header>
+
+    <div class="schedule-wrap">
+      <div class="time-grid">
+        <div class="hours" id="hoursColumn"></div>
+        <div class="day-col" id="dayColumn">
+          <div class="day-header">
+            <div class="day-name" id="dayName">---</div>
+            <div id="dateLabel"></div>
+          </div>
+          <div class="day-body" id="dayBody">
+            <div class="hours-line" id="hoursLine"></div>
+            <div class="now-line" id="nowLine" style="display:none"></div>
+            <div class="now-dot" id="nowDot" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="vova.js"></script>
+</body>
+</html>
