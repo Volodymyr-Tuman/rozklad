@@ -39,7 +39,7 @@ const scheduleData = {
       { title: 'Zajęcia z wychowawcą (113)', start: '08:00', end: '08:45' },
       { title: 'Biznes i zarządzanie (113)', start: '08:55', end: '09:40' },
       { title: 'Fizyka (120)', start: '09:50', end: '10:35' },
-      { title: 'Język polski (114)', start: '10:45', end: '11:30' },
+      { title: 'Język polski (14)', start: '10:45', end: '11:30' },
       { title: 'Historia (20)', start: '11:40', end: '12:25' },
       { title: 'Wychowanie fizyczne (sg2)', start: '12:30', end: '13:15' }
 
