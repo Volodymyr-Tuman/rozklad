@@ -1,0 +1,62 @@
+:root{
+      --hour-height: 70px; /* phone-friendly */
+      --start-hour: 7;
+      --end-hour: 22;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{margin:0;padding:12px;background:#f5f7fb;color:#111}
+    .app{max-width:980px;margin:0 auto}
+
+    /* Header */
+    header{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+    header h1{font-size:20px;margin:0;text-align:center}
+
+    .controls{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap}
+    button{background:#1f6feb;color:#fff;border:0;padding:14px 18px;border-radius:14px;font-size:17px;cursor:pointer}
+    button.secondary{background:#e6eefc;color:#0b3a86}
+    .day-label{font-weight:600;font-size:15px;padding:4px 0}
+
+    /* Container */
+    .schedule-wrap{position:relative;border-radius:12px;background:#fff;padding:8px;box-shadow:0 6px 20px rgba(20,30,60,0.08)}
+
+    /* Grid: now scrollable horizontally */
+    .time-grid{position:relative;display:flex;gap:12px;overflow-x:auto;padding-bottom:8px}
+    .time-grid::-webkit-scrollbar{height:6px}
+    .time-grid::-webkit-scrollbar-thumb{background:#ccd3e6;border-radius:10px}
+
+    /* hours */
+    .hours{width:52px;padding-right:4px;display:flex;flex-direction:column;align-items:flex-end;flex:none}
+    .hour-cell{height:var(--hour-height);padding-right:6px;font-size:13px;color:#556}
+
+    /* Day column */
+    .day-col{flex:1;min-width:320px;position:relative;border-left:1px solid rgba(15,30,60,0.04);padding-left:8px}
+    .day-header{display:flex;justify-content:space-between;align-items:center;padding:6px 0 10px}
+    .day-name{font-size:17px;font-weight:700}
+    #dateLabel{font-size:12px;color:#455}
+
+    .day-body{position:relative;flex:1;min-height:calc((var(--end-hour) - var(--start-hour)) * var(--hour-height));border-radius:8px}
+    .hours-line{position:absolute;left:0;right:0;top:0}
+    .hour-row{height:var(--hour-height);border-top:1px dashed rgba(18,30,60,0.06)}
+
+    /* Lesson cards */
+    .lesson{font-size:16px;position:absolute;left:4px;right:4px;border-radius:10px;padding:6px 8px;background:linear-gradient(180deg,#fff,#f8fbff);box-shadow:0 4px 10px rgba(20,40,80,0.06);border:1px solid rgba(15,40,120,0.06);transition:background .3s,transform .2s;font-size:14px}
+    .lesson.past{background:linear-gradient(180deg,#e6f8ea,#dcf3dd);border-color:rgba(20,150,100,0.12)}
+    .lesson .title{font-weight:700;font-size:14px;margin-bottom:2px}
+    .lesson .meta{font-size:11px;color:#234}
+
+    /* Time marker */
+    .now-line{position:absolute;left:0;right:0;height:2px;background:#ff4d4f;border-radius:2px;transform:translateY(-1px)}
+    .now-dot{position:absolute;width:9px;height:9px;border-radius:50%;background:#ff4d4f;right:0;transform:translateY(-50%)}
+
+    /* Legend */
+    .legend{margin-top:10px;font-size:12px;color:#345;display:flex;gap:12px;flex-wrap:wrap}
+    .chip{width:14px;height:10px;border-radius:4px;background:#e6eefc;border:1px solid rgba(10,30,90,0.06)}
+    .chip.past{background:#bfeec5}
+
+    /* Mobile tweaks */
+    @media(max-width:480px){.day-col{min-width:320px}button{padding:16px 20px;font-size:19px}.controls{gap:8px}header h1{font-size:22px}.lesson .title{font-size:16px}.lesson .meta{font-size:13px}}
+      button{padding:8px 12px;font-size:14px}
+      .controls{gap:4px}
+      header h1{font-size:18px}
+      .lesson .title{font-size:13px}
+      .lesson .meta{font-size:10px}

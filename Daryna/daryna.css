@@ -1,0 +1,208 @@
+:root{
+  --hour-height: 70px;
+  --start-hour: 7;
+  --end-hour: 22;
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+
+body{
+  margin:0;
+  padding:12px;
+  background:#e7fff1; /* світло-зелений фон */
+  color:#0f4024;      /* темний зелений текст */
+}
+
+.app{max-width:980px;margin:0 auto}
+
+/* Header */
+header{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+header h1{font-size:20px;margin:0;text-align:center;color:#1f7a46;}
+
+.controls{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap}
+
+button{
+  background:#2e9e5b;       /* зелені кнопки */
+  color:#fff;
+  border:0;
+  padding:14px 18px;
+  border-radius:14px;
+  font-size:17px;
+  cursor:pointer;
+}
+
+button.secondary{
+  background:#ccf7dd;       /* світло-зелений */
+  color:#1f7a46;
+}
+
+.day-label{font-weight:600;font-size:15px;padding:4px 0;color:#145c34}
+
+/* Container */
+.schedule-wrap{
+  position:relative;
+  border-radius:12px;
+  background:#fff;
+  padding:8px;
+  box-shadow:0 6px 20px rgba(30,120,60,0.08); /* зелена тінь */
+}
+
+/* Grid */
+.time-grid{
+  position:relative;
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding-bottom:8px
+}
+
+.time-grid::-webkit-scrollbar{height:6px}
+.time-grid::-webkit-scrollbar-thumb{
+  background:#a5e8c6; /* зелений скролбар */
+  border-radius:10px
+}
+
+/* hours */
+.hours{
+  width:52px;
+  padding-right:4px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  flex:none
+}
+
+.hour-cell{
+  height:var(--hour-height);
+  padding-right:6px;
+  font-size:13px;
+  color:#5c8f72; /* м’який зелений */
+}
+
+/* Day column */
+.day-col{
+  flex:1;
+  min-width:320px;
+  position:relative;
+  border-left:1px solid rgba(0,120,60,0.08);
+  padding-left:8px
+}
+
+.day-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:6px 0 10px
+}
+
+.day-name{
+  font-size:17px;
+  font-weight:700;
+  color:#1f7a46;
+}
+
+#dateLabel{font-size:12px;color:#5c8f72}
+
+.day-body{
+  position:relative;
+  flex:1;
+  min-height:calc((var(--end-hour) - var(--start-hour)) * var(--hour-height));
+  border-radius:8px
+}
+
+.hours-line{position:absolute;left:0;right:0;top:0}
+.hour-row{
+  height:var(--hour-height);
+  border-top:1px dashed rgba(0,120,60,0.08)
+}
+
+/* Lesson cards */
+.lesson{
+  font-size:16px;
+  position:absolute;
+  left:4px;
+  right:4px;
+  border-radius:10px;
+  padding:6px 8px;
+  background:linear-gradient(180deg,#fff,#e8fff1); /* легкий зелений градієнт */
+  box-shadow:0 4px 10px rgba(0,120,60,0.10);
+  border:1px solid rgba(0,120,60,0.12);
+  transition:background .3s,transform .2s;
+  font-size:14px;
+}
+
+.lesson.past{
+  background:linear-gradient(180deg,#d7ffe9,#c9ffdf);
+  border-color:rgba(40,160,100,0.18)
+}
+
+.lesson .title{
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:2px;
+  color:#164d32;
+}
+
+.lesson .meta{
+  font-size:11px;
+  color:#2f6c4b;
+}
+
+/* Time marker */
+.now-line{
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background:#00d96e; /* яскравий зелено-м’ятний */
+  border-radius:2px;
+  transform:translateY(-1px)
+}
+
+.now-dot{
+  position:absolute;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#00d96e;
+  right:0;
+  transform:translateY(-50%)
+}
+
+/* Legend */
+.legend{
+  margin-top:10px;
+  font-size:12px;
+  color:#2f6c4b;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+.chip{
+  width:14px;
+  height:10px;
+  border-radius:4px;
+  background:#ccf7dd;
+  border:1px solid rgba(0,120,60,0.14)
+}
+
+.chip.past{
+  background:#b2eec8
+}
+
+/* Mobile tweaks */
+@media(max-width:480px){
+  .day-col{min-width:320px}
+  button{padding:16px 20px;font-size:19px}
+  .controls{gap:8px}
+  header h1{font-size:22px}
+  .lesson .title{font-size:16px}
+  .lesson .meta{font-size:13px}
+}
+
+button{padding:8px 12px;font-size:14px}
+.controls{gap:4px}
+header h1{font-size:18px}
+.lesson .title{font-size:13px}
+.lesson .meta{font-size:10px}
