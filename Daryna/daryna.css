@@ -9,20 +9,20 @@
 body{
   margin:0;
   padding:12px;
-  background:#e7fff1; /* світло-зелений фон */
-  color:#0f4024;      /* темний зелений текст */
+  background:#e6f3ff; /* світло-блакитний фон */
+  color:#0d2f55;      /* темний синій текст */
 }
 
 .app{max-width:980px;margin:0 auto}
 
 /* Header */
 header{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
-header h1{font-size:20px;margin:0;text-align:center;color:#1f7a46;}
+header h1{font-size:20px;margin:0;text-align:center;color:#1e5fa8;}
 
 .controls{display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap}
 
 button{
-  background:#2e9e5b;       /* зелені кнопки */
+  background:#2f74c0;       /* сині кнопки */
   color:#fff;
   border:0;
   padding:14px 18px;
@@ -32,11 +32,11 @@ button{
 }
 
 button.secondary{
-  background:#ccf7dd;       /* світло-зелений */
-  color:#1f7a46;
+  background:#d5e9ff;       /* світло-синій */
+  color:#1e5fa8;
 }
 
-.day-label{font-weight:600;font-size:15px;padding:4px 0;color:#145c34}
+.day-label{font-weight:600;font-size:15px;padding:4px 0;color:#164a7d}
 
 /* Container */
 .schedule-wrap{
@@ -44,7 +44,7 @@ button.secondary{
   border-radius:12px;
   background:#fff;
   padding:8px;
-  box-shadow:0 6px 20px rgba(30,120,60,0.08); /* зелена тінь */
+  box-shadow:0 6px 20px rgba(30,70,150,0.08); /* синя тінь */
 }
 
 /* Grid */
@@ -58,7 +58,7 @@ button.secondary{
 
 .time-grid::-webkit-scrollbar{height:6px}
 .time-grid::-webkit-scrollbar-thumb{
-  background:#a5e8c6; /* зелений скролбар */
+  background:#a9cef7; /* синій скролбар */
   border-radius:10px
 }
 
@@ -76,7 +76,7 @@ button.secondary{
   height:var(--hour-height);
   padding-right:6px;
   font-size:13px;
-  color:#5c8f72; /* м’який зелений */
+  color:#5a7ea6; /* м’який синій */
 }
 
 /* Day column */
@@ -84,7 +84,7 @@ button.secondary{
   flex:1;
   min-width:320px;
   position:relative;
-  border-left:1px solid rgba(0,120,60,0.08);
+  border-left:1px solid rgba(0,70,140,0.08);
   padding-left:8px
 }
 
@@ -98,10 +98,10 @@ button.secondary{
 .day-name{
   font-size:17px;
   font-weight:700;
-  color:#1f7a46;
+  color:#1e5fa8;
 }
 
-#dateLabel{font-size:12px;color:#5c8f72}
+#dateLabel{font-size:12px;color:#5a7ea6}
 
 .day-body{
   position:relative;
@@ -113,7 +113,7 @@ button.secondary{
 .hours-line{position:absolute;left:0;right:0;top:0}
 .hour-row{
   height:var(--hour-height);
-  border-top:1px dashed rgba(0,120,60,0.08)
+  border-top:1px dashed rgba(0,70,140,0.08)
 }
 
 /* Lesson cards */
@@ -124,28 +124,28 @@ button.secondary{
   right:4px;
   border-radius:10px;
   padding:6px 8px;
-  background:linear-gradient(180deg,#fff,#e8fff1); /* легкий зелений градієнт */
-  box-shadow:0 4px 10px rgba(0,120,60,0.10);
-  border:1px solid rgba(0,120,60,0.12);
+  background:linear-gradient(180deg,#fff,#e8f3ff); /* легкий синій градієнт */
+  box-shadow:0 4px 10px rgba(0,70,140,0.10);
+  border:1px solid rgba(0,70,140,0.12);
   transition:background .3s,transform .2s;
   font-size:14px;
 }
 
 .lesson.past{
-  background:linear-gradient(180deg,#d7ffe9,#c9ffdf);
-  border-color:rgba(40,160,100,0.18)
+  background:linear-gradient(180deg,#d8ecff,#c5e1ff);
+  border-color:rgba(40,100,200,0.18)
 }
 
 .lesson .title{
   font-weight:700;
   font-size:14px;
   margin-bottom:2px;
-  color:#164d32;
+  color:#163c6a;
 }
 
 .lesson .meta{
   font-size:11px;
-  color:#2f6c4b;
+  color:#2d5c8c;
 }
 
 /* Time marker */
@@ -154,7 +154,7 @@ button.secondary{
   left:0;
   right:0;
   height:2px;
-  background:#00d96e; /* яскравий зелено-м’ятний */
+  background:#00a1ff; /* яскравий синій акцент */
   border-radius:2px;
   transform:translateY(-1px)
 }
@@ -164,7 +164,7 @@ button.secondary{
   width:9px;
   height:9px;
   border-radius:50%;
-  background:#00d96e;
+  background:#00a1ff;
   right:0;
   transform:translateY(-50%)
 }
@@ -173,7 +173,7 @@ button.secondary{
 .legend{
   margin-top:10px;
   font-size:12px;
-  color:#2f6c4b;
+  color:#2d5c8c;
   display:flex;
   gap:12px;
   flex-wrap:wrap
@@ -183,12 +183,12 @@ button.secondary{
   width:14px;
   height:10px;
   border-radius:4px;
-  background:#ccf7dd;
-  border:1px solid rgba(0,120,60,0.14)
+  background:#d5e9ff;
+  border:1px solid rgba(0,70,140,0.14)
 }
 
 .chip.past{
-  background:#b2eec8
+  background:#bddbff
 }
 
 /* Mobile tweaks */
