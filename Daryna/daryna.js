@@ -33,9 +33,6 @@ const scheduleData = {
     ],
 
     'Thursday': [
-      { title: 'Stylizacja (28)', start: '08:00', end: '08:45' },
-      { title: 'Stylizacja (28)', start: '08:55', end: '09:40' },
-      { title: 'Stylizacja (28)', start: '09:50', end: '10:35' },
       { title: 'Chemia (114)', start: '10:45', end: '11:30' },
       { title: 'Zajęcia z wychowawcą (Aula)', start: '11:40', end: '12:25' },
       { title: 'Matematyka (M4)', start: '12:30', end: '13:15' },
