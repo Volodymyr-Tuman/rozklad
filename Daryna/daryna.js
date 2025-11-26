@@ -42,13 +42,11 @@ const scheduleData = {
     ],
 
     'Friday': [
-      { title: 'Дописати', start: '09:50', end: '10:35' },
-      { title: 'Дописати', start: '10:45', end: '11:30' },
-      { title: 'Дописати', start: '11:40', end: '12:25' },
-      { title: 'Дописати', start: '12:30', end: '13:15' },
-      { title: 'Дописати', start: '13:45', end: '14:30' },
-      { title: 'Дописати', start: '14:35', end: '15:20' },
-      { title: 'Дописати', start: '15:30', end: '16:15' }
+      { title: 'Podstawy fryzierstwa (6)', start: '09:50', end: '10:35' },
+      { title: 'Podstawy fryzierstwa (6)', start: '10:45', end: '11:30' },
+      { title: 'Podstawy fryzierstwa (6)', start: '11:40', end: '12:25' },
+      { title: 'Technologia fryzierstwa (22)', start: '12:30', end: '13:15' },
+      { title: 'Chemia (109)', start: '13:45', end: '14:30' }
     ]
   }
 };
