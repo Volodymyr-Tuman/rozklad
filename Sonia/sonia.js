@@ -25,7 +25,7 @@ const scheduleData = {
       { title: 'Język polski (M1)', start: '09:50', end: '10:35' },
       { title: 'Język angielski (115)', start: '10:45', end: '11:30' },
       { title: 'Język angielski (115)', start: '11:40', end: '12:25' },
-      { title: 'Informatyka (112)', start: '12:30', end: '13:15' },
+      { title: 'Informatyka (212)', start: '12:30', end: '13:15' },
       { title: 'Biznes i zarządzanie (113)', start: '13:45', end: '14:30' }
     ],
 
